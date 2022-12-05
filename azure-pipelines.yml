@@ -10,6 +10,17 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 5.8.0
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    command: 'restore'
+    restoreSolution: 'NUnitVsTestAdapterBug.sln'
+    feedsToUse: 'select'
+    
 - task: VSBuild@1
   inputs:
     solution: '**\*.sln'
