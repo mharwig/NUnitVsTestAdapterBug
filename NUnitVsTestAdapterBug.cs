@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Threading;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
-
-// ReSharper disable ObjectCreationAsStatement
+﻿using NUnit.Framework;
 
 namespace NUnitVsTestAdapterBug
 {
