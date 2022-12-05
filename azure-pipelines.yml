@@ -10,10 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: MSBuild@1
+- task: VSBuild@1
   inputs:
-    solution: '**/*.sln'
-    restoreNugetPackages: true
+    solution: '**\*.sln'
 
 - task: VSTest@2
   inputs:
